@@ -14,7 +14,10 @@ int main()
    
 
     int start=0;
-    int end=sizeof(arr)/sizeof(arr[0])-1;
+    int end=sizeof(arr)/sizeof(arr[0])-1;//sizeof(arr) 用于计算整个整个数组 arr 所占的内存字节数。
+                                         //sizeof(arr[0])/用于计算数组中单个元素所占的内存字节数。
+                                         //两者相除 sizeof(arr) / sizeof(arr[0]) 得到的是数组的元素个数（长度）。
+                                         //再减去 1，是因为数组的下标是从 0 开始计数的，所以最后一个元素的下标等于数组长度减 1。
      while(start<end){
     int temp=arr[start];
 arr[start]=arr[end];
